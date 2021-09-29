@@ -1,6 +1,6 @@
 package idbuilder
 
-type  interface {
+type IdBuilder interface {
 	Generate(id string) string
 }
 
