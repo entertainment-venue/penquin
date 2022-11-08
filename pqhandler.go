@@ -34,7 +34,6 @@ func (pq *PenQuin) topicUpdateHandler(c *gin.Context) {
 
 }
 
-
 func (pq *PenQuin) shardSearchHandler(c *gin.Context) {
 
 }

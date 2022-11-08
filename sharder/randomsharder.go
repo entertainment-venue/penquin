@@ -13,7 +13,7 @@ type RandomSharder struct {
 	generator *rand.Rand
 }
 
-func NewRandomPartitioner(topic string) RandomSharder {
+func NewRandomPartitioner(topic string) Sharder {
 	p := new(RandomSharder)
 	p.generator = rand.New(rand.NewSource(time.Now().UTC().UnixNano()))
 	return p

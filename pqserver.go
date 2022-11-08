@@ -1,9 +1,10 @@
 package penquin
 
-import 	"github.com/gin-gonic/gin"
+import "github.com/gin-gonic/gin"
 
 type PQServer struct {
 	ginEngine *gin.Engine
+	pq        *PenQuin
 }
 
 func NewPQServer(pq *PenQuin) PQServer {

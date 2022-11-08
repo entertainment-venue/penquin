@@ -1,15 +1,14 @@
 package penquin
 
 import (
-	"github.com/entertainment-venue/penquin/orderqueue"
 	"github.com/entertainment-venue/penquin/sharder"
 )
 
 type PQTopic struct {
 	Name      string
-	ShardsMap map[string]orderqueue.OrderQueue
+	ShardsMap map[string]*PQShard
 	Info      TopicInfo
-	sd   sharder.Sharder
+	sd        sharder.Sharder
 
 	messageCount int64
 	messageBytes int64
@@ -17,7 +16,15 @@ type PQTopic struct {
 
 type TopicInfo struct {
 	Name       string `json:"name"`
-	Shards     int    `json:"shards"`
+	ShardCnt   int    `json:"shard_cnt"`
 	CreateTime int64  `json:"create_time"`
 	UpdateTime int64  `json:"update_time"`
+}
+
+func NewPQTopic() (*PQTopic, error) {
+
+}
+
+func (t *PQTopic) AddMessage(score float64, content []byte) error {
+
 }
