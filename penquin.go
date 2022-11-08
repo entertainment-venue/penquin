@@ -1,17 +1,11 @@
 package penquin
 
-import (
-	"go.uber.org/zap"
-)
-
 type PenQuin struct {
 	Topics map[string]PQTopic
 
 	PQConfig PQConfig
-	PQStats PQStats
+	PQStats  PQStats
 	PQServer PQServer
-
-	logger *zap.Logger
 }
 
 func NewPenquin(pqconfig PQConfig) PenQuin {
@@ -41,4 +35,3 @@ func (pq *PenQuin) UpdateTopic(name string) error {
 func (pq *PenQuin) PutMessages(bts []byte) error {
 
 }
-
