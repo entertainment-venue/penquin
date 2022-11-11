@@ -1,6 +1,8 @@
 package penquin
 
-import "github.com/gin-gonic/gin"
+import (
+	"github.com/gin-gonic/gin"
+)
 
 func (pq *PenQuin) pingHandler(c *gin.Context) {
 
@@ -34,7 +36,6 @@ func (pq *PenQuin) topicUpdateHandler(c *gin.Context) {
 
 }
 
-
 func (pq *PenQuin) shardSearchHandler(c *gin.Context) {
 
 }
@@ -50,13 +51,3 @@ func (pq *PenQuin) shardDeleteHandler(c *gin.Context) {
 func (pq *PenQuin) shardUpdateHandler(c *gin.Context) {
 
 }
-
-func (pq *PenQuin) pingHandler(c *gin.Context) {
-
-}
-
-func (pq *PenQuin) pingHandler(c *gin.Context) {
-
-}
-
-

@@ -1,6 +1,8 @@
 package penquin
 
-import "time"
+import (
+	"time"
+)
 
 type PQConfig struct {
 	StorageType    string
