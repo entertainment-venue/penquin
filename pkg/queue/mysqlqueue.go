@@ -21,9 +21,14 @@ type mysqlqueue struct {
 	table string
 }
 
-// TODO
-func (mq *mysqlqueue) PollWithScore(f float64) ([]byte, error) {
-	return nil, nil
+func (mq *mysqlqueue) PollWithScore(start float64, end float64) ([][]byte, error) {
+	//TODO implement me
+	panic("implement me")
+}
+
+func (mq *mysqlqueue) RemoveWithScore(start float64, end float64) (int64, error) {
+	//TODO implement me
+	panic("implement me")
 }
 
 func NewMysqlQueue(db *gorm.DB, table string) (*mysqlqueue, error) {

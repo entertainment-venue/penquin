@@ -15,6 +15,10 @@ type KVStore interface {
 	Del([]byte) (bool, error)
 }
 
+func NewRedisKVStore() (*rediskv, error) {
+	return nil, nil
+}
+
 type rediskv struct {
 	rdb *redis.Client
 

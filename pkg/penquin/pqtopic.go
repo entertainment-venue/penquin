@@ -1,7 +1,7 @@
 package penquin
 
 import (
-	"github.com/entertainment-venue/penquin/sharder"
+	"github.com/entertainment-venue/penquin/pkg/sharder"
 )
 
 type PQTopic struct {
@@ -22,9 +22,9 @@ type TopicInfo struct {
 }
 
 func NewPQTopic() (*PQTopic, error) {
-
+	return nil, nil
 }
 
 func (t *PQTopic) AddMessage(score float64, content []byte) error {
-
+	return nil
 }
