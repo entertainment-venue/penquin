@@ -5,13 +5,13 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/urfave/cli"
+	"github.com/urfave/cli/v2"
 )
 
 var (
 	Version = ""
 
-	startCmd = cli.Command{
+	startCmd = &cli.Command{
 		Name:   "start",
 		Usage:  "penquin start",
 		Action: nil,
@@ -35,7 +35,7 @@ func newPenQuin() *cli.App {
 	app.Usage = "PenQuin is a DelayQueue base on REDIS."
 	app.Flags = startCmd.Flags
 	//commands
-	app.Commands = []cli.Command{
+	app.Commands = []*cli.Command{
 		startCmd,
 	}
 	//action
@@ -43,8 +43,7 @@ func newPenQuin() *cli.App {
 		if c.NumFlags() == 0 {
 			return cli.ShowAppHelp(c)
 		}
-
-		return startCmd.Action.(func(c *cli.Context) error)(c)
+		return startCmd.Action(c)
 	}
 
 	return app
